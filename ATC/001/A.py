@@ -1,3 +1,7 @@
+#　再帰の上限を変更しておく
+import sys
+sys.setrecursionlimit(10000000)
+
 H, W = map(int, input().split())
 maps = [input() for _ in range(H)]
 for i in range(H):
