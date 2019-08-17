@@ -15,6 +15,7 @@ for i in range(N):
 	sum_E.append(cnt_e)
 	sum_W.append(cnt_w)
 
+
 for i in range(N):
 	ans = min(ans, sum_W[i] + sum_E[-1] - sum_E[i+1])
 

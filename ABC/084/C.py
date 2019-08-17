@@ -12,12 +12,15 @@ for i in range(N):
     if i == N - 1:
         print(0)
         exit()
-
+    
+    # j → j + 1区間の最短時間を求めていく
     for j in range(i, N-1):
-        if t < S[j]:
-            t = math.ceil(S[j]/F[j]) * F[j] + C[j]
-        elif t >= S[j]:
-            t += C[j] + t % F[j]
+        # 駅j+1を出発する時刻は S[j] + F[j] * k となる
+        # これがt以上になる最小のkを求める
+        k_tmp = math.ceil((t - S[j])/F[j])
+        k = max(0,k_tmp)
+
+        t = S[j] + F[j] * k + C[j]
     
     print(t)
 
