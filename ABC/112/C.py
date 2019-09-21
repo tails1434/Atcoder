@@ -1,18 +1,21 @@
 def main():
     N = int(input())
-    H = 0
-    Cx = 0
-    Cy = 0
-    x = [0] * N
-    y = [0] * N
-    h = [0] * N
+    p = []
     for i in range(N):
-        x[i], y[i], h[i] = map(int, input().split())
+        x,y,h = map(int,input().split())
+        p.append([x,y,h])
+ 
+    p.sort(key=lambda x: x[2])
+    a,b,c = p[-1]
+    for i in range(101):
+        for j in range(101):
+            H = c + abs(a - i) + abs(b - j)
+            for x,y,h in p:
+                if h != max(H - abs(x - i) - abs(y - j), 0):
+                    break
+            else:
+                print(i,j,H)
+                exit()
 
-    for i in range(1, 101):
-        for j in range(1,101):
-            for k in range(N):
-                if h[i] != 0:
-                    H =
 
 main()
