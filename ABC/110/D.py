@@ -31,6 +31,7 @@ def main():
     MOD = 10 ** 9 + 7
     c = collections.Counter(prime_factorize(M))
     ans = 1
+    print(c)
     for i, j in c.items():
         ans *= cmb(N+j-1,N-1)
         ans %= MOD

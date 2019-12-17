@@ -21,6 +21,7 @@ def main():
                 d[j] += 1
                 cur = cur // j
 
+    print(d)
     ans = 0
     for i in d:
         if i >= 74:
