@@ -1,7 +1,10 @@
 def main():
     N = int(input())
-    ans = (N - 1) * N // 2
-    print(ans)
+    S = input()
+    Q = int(input())
+    
+    
+
 
 if __name__ == "__main__":
     main()

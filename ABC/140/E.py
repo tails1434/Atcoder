@@ -1,7 +1,8 @@
 def main():
     N = int(input())
-    ans = (N - 1) * N // 2
-    print(ans)
+    P = list(map(int, input().split()))
+    
+
 
 if __name__ == "__main__":
     main()
