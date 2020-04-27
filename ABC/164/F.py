@@ -1,7 +1,4 @@
 def main():
-    a = input()
-    b = input()
-    c = input()
     
 
 

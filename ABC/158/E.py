@@ -27,10 +27,10 @@ def main():
         C[idx + 1] = (C[idx] + tmp) % P
         ten *= 10
         ten %= P
-
+    print(C)
     for c in C:
         d[c] += 1
-
+    print(d)
     for i, j in d.items():
         ans += j * (j - 1) // 2
 
